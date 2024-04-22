@@ -1,0 +1,27 @@
+.heroimg {
+    background-image: url(bg.jpg);
+    background-size: cover;
+}
+
+.text-monkey {
+    color: brown;
+}
+
+.btn-monkey {
+    background-color: brown;
+    color: #fff;
+}
+
+.btn-monkey:hover {
+    background-color: rgb(198, 83, 83);
+    color: #fff;
+}
+
+.card {
+    transition: all .4s; /* 讓動畫產生漸變（不會突然跳出來）*/
+}
+
+.card:hover {
+    transform: translate(-5px, -5px) rotate(-1deg); /* 往左移5px、上移5px、逆時針選轉1度 */
+    box-shadow: 5px 5px 5px #e2e2e2; /* 陰影，右移5px、下移5px、模糊程度5px、陰影顏色 */
+}
