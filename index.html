@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="TW">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>SHU-YU</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -13,116 +13,149 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-opacity-75 m-3 rounded shadow">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-opacity-80">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="navbar-brand" href="#">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="burger">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse row justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end text-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">首頁</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">關於我</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <a class="nav-link" href="#">品牌故事</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="#">最新消息</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">服務項目</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">常見問題</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">聯絡我們</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- 這裡是大圖 -->
-    <div class="heroimg w-100 vh-100 d-flex justify-content-center align-items-center">
-        <div class="slogan">
-            <h1 class="text-monkey">Hello World</h1>
-            <div class="text-center">
-                <a href="#" class="btn btn-lg btn-monkey">Join us!</a>
+    <div id="carouselExampleDark" class="carousel carousel-white slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active " data-bs-interval="10000">
+                <img src="bg/bg_1.jpg" class="img-fluid w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h1>專業計畫諮詢</h1>
+                    <div class="bg-p">
+                        <p>為您規劃最適合的施作計畫</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="bg/bg_2.jpg" class="img-fluid w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <div class="bg-h fs-xl-1 fs-md-3 fs-5-sm">
+                        <h1>蚊蟲防治</h1>
+                    </div>
+                    <div class="bg-p fs-xl-1">
+                        <p>「熱煙霧施作」與「水霧殘效施作」有什麼差異？</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="bg/bg_4.jpg" class="img-fluid d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h1>現場施作紀錄</h1>
+                    <div class="bg-p">
+                        <p>找出孳生源，直接對付幼蟲，才能有效控制蟲害</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
     <!-- 大圖結束 -->
-
-    <!-- 內容開始 -->
+    <div class="space"></div>
+    <!-- 內容1開始 -->
     <div class="container my-5">
         <div class="row">
-            <div class="col-5">
-                <img src="bg.jpg" class="img-fluid shadow rounded" alt="">
-            </div>
-            <div class="col">
-                <h2>This is a pen</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium expedita sunt impedit
-                    accusantium quas ab quaerat fugit adipisci aperiam, excepturi officiis perferendis voluptatem modi
-                    sint vel quidem laboriosam possimus commodi delectus placeat. Nostrum ducimus cumque quia ipsa
-                    tenetur pariatur provident quos non mollitia illo unde, consequuntur repudiandae nulla voluptate
-                    dolor.</p>
+            <div class="col_1">
+                <p class="fw-bold fs-1 text-center">專業 白蟻 消毒</p>
+                <p class="fs-3 text-center">專業病媒防治業者，為您規劃最適合的防治方案<br>歡迎來電免費諮詢！</p>
             </div>
         </div>
     </div>
+    <!-- 內容1結束 -->
 
     <!-- 卡片開始 -->
     <div class="container my-5">
         <div class="row">
+            <div class="card-title">
+                <h3 class="fw-bold border-start border-dark border-5 px-2 my-3">精選計畫</h3>
+            </div>
             <div class="col">
                 <div class="card">
-                    <img src="bg.jpg" class="card-img-top" alt="...">
+                    <img src="card/card_1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title fw-bold">蟲害防治</h5>
+                        <p class="card-text">浴室、廁所的小飛蟲，真的好煩人！趕不走也打不完，除了藥劑噴灑、殺死成蟲，還需找出孳生源，直接對付幼蟲，才能有效控制蟲害的再發生。</p>
+                        <a href="#" class="btn btn-dark">了解更多</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="bg.jpg" class="card-img-top" alt="...">
+                    <img src="card/card_2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title fw-bold">白蟻防治</h5>
+                        <p class="card-text">除了治療，還要懂得與預防喔！家裡會有白蟻，通常代表附近就是有白蟻族群的活動。可能是野生或常駐鄰居家的，因此，每年都要小心白蟻入侵的問題。</p>
+                        <a href="#" class="btn btn-dark">了解更多</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="bg.jpg" class="card-img-top" alt="...">
+                    <img src="card/card_3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title fw-bold">紅火蟻防治</h5>
+                        <p class="card-text">紅火蟻，雜食性、好高油食物，用「原味洋芋片」放在蟻丘上5～10分鐘，就能判斷是否為「紅火蟻」。不當的干擾或破壞蟻丘，反而增加了防治的難度。</p>
+                        <a href="#" class="btn btn-dark">了解更多</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="bg.jpg" class="card-img-top" alt="...">
+                    <img src="card/card_4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title fw-bold">殺菌消毒</h5>
+                        <p class="card-text">肉眼看不見細菌，通常無法直觀地判別施作效果。豎優除了選用「防疫等級、食品級、 無味、無腐蝕性」的產品，在施作時，也必須注意所有的細節。</p>
+                        <a href="#" class="btn btn-dark">了解更多</a>
                     </div>
                 </div>
             </div>
@@ -133,23 +166,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <h5>哈哈哈有限公司</h5>
-                    <p>tel. 00000<br>
-                        email. 14111@mnmm.cccc</p>
+                    <h5 class="fw-bold">豎優生物防治有限公司</h5>
+                    <p>tel: 0953-922-099
                 </div>
-                <div class="col">
-                    <h6>Sitemap</h6>
-                    <p>Home</p>
-                    <p></p>
+                <div class="col-4 text-end">
+                    <div class="col1">
+                        <h6>品牌故事<br>最新消息<br>服務項目<br>常見問題</h6>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
