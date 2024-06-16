@@ -22,7 +22,11 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <div class="btn-menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </button>
             </div>
 
@@ -102,6 +106,7 @@
     </div>
     <!-- 大圖結束 -->
     <div class="space"></div>
+
     <!-- 內容1開始 -->
     <div class="container my-5">
         <div class="row">
@@ -113,11 +118,13 @@
     </div>
     <!-- 內容1結束 -->
 
-    <!-- 卡片開始 -->
-    <div class="container my-5 mx-4-sm">
+    <hr size="4">
+
+    <!-- 卡片、流程開始 -->
+    <div class="container mx-2-sm">
         <div class="row">
-            <div class="card-title">
-                <h3 class="fw-bold border-start border-dark border-5 px-2 my-3">精選計畫</h3>
+            <div class="content-title">
+                <h3 class="fw-bold border-start border-dark border-5 px-2" id="title-1">精選計畫</h3>
             </div>
             <div class="col-12 col-md-3">
                 <div class="card">
@@ -160,7 +167,80 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <!-- 工作流程開始 -->
+            <div class="content-title" id="title-2">
+                <h3 class="fw-bold border-start border-dark border-5 px-2">工作流程</h3>
+            </div>
+            <div class="sop">
+                <div class="step">
+                    <div class="line"></div>
+                    <div class="step-dot">
+                        <div class="st-1"></div>
+                        <div class="work">
+                            <div class="work-1">
+                                <div class="w-title">
+                                    <p>勘查評估</p>
+                                </div>
+                                <div class="w-content">
+                                    <p>實際了解現場狀況<br>並進行分析評估</p>
+                                </div>
+                            </div>
+                            <div class="work-2">
+                                <div class="w-title">
+                                    <p>說明狀況</p>
+                                </div>
+                                <div class="w-content">
+                                    <p>實際了解現場狀況<br>並進行分析評估</p>
+                                </div>
+                            </div>
+                            <div class="work-3">
+                                <div class="w-title">
+                                    <p>擬定計畫</p>
+                                </div>
+                                <div class="w-content">
+                                    <p>實際了解現場狀況<br>並進行分析評估</p>
+                                </div>
+                            </div>
+                            <div class="work-4">
+                                <div class="w-title">
+                                    <p>報價</p>
+                                </div>
+                                <div class="w-content">
+                                    <p>實際了解現場狀況<br>並進行分析評估</p>
+                                </div>
+                            </div>
+                            <div class="work-5">
+                                <div class="w-title">
+                                    <p>預約施作</p>
+                                </div>
+                                <div class="w-content">
+                                    <p>實際了解現場狀況<br>並進行分析評估</p>
+                                </div>
+                            </div>
+                            <div class="work-6">
+                                <div class="w-title">
+                                    <p>現場施作</p>
+                                </div>
+                                <div class="w-content">
+                                    <p>實際了解現場狀況<br>並進行分析評估</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="st-2"></div>
+                        <div class="st-4"></div>
+                        <div class="st-3"></div>
+                        <div class="st-5"></div>
+                        <div class="st-6"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+
+
+
 
     <div class="container-fluid bg-dark text-white py-5">
         <div class="container">
@@ -181,6 +261,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="common.js"></script>
 </body>
 
 </html>

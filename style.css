@@ -1,3 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    margin: 50px 0;
+}
+
 .nav-link :active {
     border-bottom: dark;
 }
@@ -6,6 +21,44 @@
     font-weight:700;
 }
 
+/* 漢堡選單!開始! */
+.btn-menu {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn-menu div {
+    width: 100%;
+    height: 4px;
+    background-color: #444;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    transition: all .5s;
+}
+
+.btn-menu.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.btn-menu.active div:first-child {
+    transform: translateY(12px) rotate(45deg);
+}
+
+.btn-menu.active div:last-child {
+    transform: translateY(-12px) rotate(-45deg);
+}
+/* 漢堡選單!結束! */
+
+.content-title {
+    margin-top: 20px;
+}
+
+#title-2 {
+    margin-top: 50px;
+}
+
+/* 卡片開始 */
 .heroimg {
     background-image: url(bg_img.jpg);
     background-size: cover;
@@ -30,6 +83,172 @@ h1 {
 .card:hover {
     box-shadow: 5px 5px 5px #e2e2e2; 
 }
+
+.col-12 {
+    margin-bottom: 20px;
+}
+/* 卡片結束 */
+
+/* 工作流程開始 */
+.sop {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 12% 0;
+}
+
+.step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 步驟點&線 */
+.line {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4px;
+    background-color: #888;
+    margin: 0;
+}
+
+.step-dot {
+    width: 70%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.st-1, .st-2, .st-3, .st-4, .st-5, .st-6 {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #888;
+    /* margin-bottom: 1px; */
+}
+
+.st-1 {
+    left: 0%;
+}
+
+.st-2 {
+    left: 20%;
+}
+
+.st-3 {
+    left: 40%;
+}
+
+.st-4 {
+    left: 60%;
+}
+
+.st-5 {
+    left: 80%;
+}
+
+.st-6 {
+    left: 100%;
+}
+
+ .big {
+    transform: scale(1.5);
+    background-color: #333;
+}
+
+/* 步驟內容 */
+.work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.work-1, .work-2, .work-3, .work-4, .work-5, .work-6 {
+    display: none;
+}
+
+.work-1.active, .work-2.active, .work-3.active, .work-4.active, .work-5.active, .work-6.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-1 {
+    position: absolute;
+    left: -10%;
+    top: -120px;
+}
+
+.work-2 {
+    position: absolute;
+    left: 10%;
+    top: 35px;
+}
+
+.work-3 {
+    position: absolute;
+    left: 30%;
+    top: -120px;
+}
+
+.work-4 {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+}
+
+.work-5 {
+    position: absolute;
+    left: 70%;
+    top: -120px;
+}
+
+.work-6 {
+    position: absolute;
+    left: 90%;
+    top: 35px;
+}
+
+.w-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 42px;
+    border-radius: 21px;
+    border: 2px solid #333;
+    padding-top: 15px;
+
+    font-size: larger;
+    font-weight: 700;
+}
+
+.w-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 42px;
+    margin: 15px 0;
+
+    font-size: medium;
+    font-weight: 500;
+    text-align: center;
+}
+ /* 工作流程結束 */
 
 @media (min-width :768px) {
     .d-md-block{
