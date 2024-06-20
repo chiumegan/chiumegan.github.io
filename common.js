@@ -1,68 +1,89 @@
+// RWD漢堡選單
 $(function(){
     $('.btn-menu').on('click', function(){
         $(this).toggleClass('active');
     })
 })
 
-$(function(){
+// // 工作流程dot hover、進度條
+$(function() {
+    // 記錄已經點擊過的點的索引
+    var clickedIndices = [];
+
     $('.st-1, .st-2, .st-3, .st-4, .st-5, .st-6').hover(
-        function(){
-            $(this).toggleClass('big');
-    })
-})
-
-$(function(){
-    $('.st-1').hover(
         function() {
-            $('.work-1').addClass('active');
+            var index = $(this).data('index');
+            if (!clickedIndices.includes(index)) {
+                $(this).addClass('big');
+            }
         },
         function() {
-            $('.work-1').removeClass('active');
+            var index = $(this).data('index');
+            if (!clickedIndices.includes(index)) {
+                $(this).removeClass('big');
+            }
         }
     );
 
-    $('.st-2').hover(
-        function() {
-            $('.work-2').addClass('active');
-        },
-        function() {
-            $('.work-2').removeClass('active');
-        }
-    );
+    $('.st-1, .st-2, .st-3, .st-4, .st-5, .st-6').on('click', function() {
+        var width = $(this).data('width');
+        var index = $(this).data('index');
 
-    $('.st-3').hover(
-        function() {
-            $('.work-3').addClass('active');
-        },
-        function() {
-            $('.work-3').removeClass('active');
+        if (!clickedIndices.includes(index)) {
+            clickedIndices.push(index);
         }
-    );
 
-    $('.st-4').hover(
-        function() {
-            $('.work-4').addClass('active');
-        },
-        function() {
-            $('.work-4').removeClass('active');
-        }
-    );
+        $('.line').css('width', width);
 
-    $('.st-5').hover(
-        function() {
-            $('.work-5').addClass('active');
-        },
-        function() {
-            $('.work-5').removeClass('active');
+        if (window.innerWidth <= 992) {
+            $('.work').each(function(i) {
+                if (i === index - 1) {
+                    $(this).addClass('active');
+                } else {
+                    $(this).removeClass('active');
+                }
+            });
+        } else {
+            $('.work').each(function(i) {
+                if (i < index) {
+                    $(this).addClass('active');
+                } else {
+                    $(this).removeClass('active');
+                }
+            });
         }
-    );
 
-    $('.st-6').hover(
-        function() {
-            $('.work-6').addClass('active');
-        },
-        function() {
-            $('.work-6').removeClass('active');
-        }
-    );
+        $('.w-title').each(function(i) {
+            if (i < index) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+
+        $('.step-dot div').each(function() {
+            if ($(this).data('index') <= index) {
+                $(this).addClass('big');
+            } else {
+                $(this).removeClass('big');
+            }
+        });
+    });
+
 });
+
+$(document).ready(function() {
+    $('#myinput').on("keyup", function() {
+        // 抓搜尋關鍵字
+        var value = $(this).val().toLowerCase();
+
+        // 抓下方符合的block
+        $('.pro-card').filter(function() {
+            $(this).toggle($(this).find('.program-info-title').text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+
+
+
+
