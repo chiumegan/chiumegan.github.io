@@ -200,12 +200,7 @@ h3 {
     align-items: center;
 }
 
-.st-1,
-.st-2,
-.st-3,
-.st-4,
-.st-5,
-.st-6 {
+.st-1,.st-2,.st-3,.st-4,.st-5,.st-6 {
     position: absolute;
     width: 12px;
     height: 12px;
